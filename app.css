@@ -1,0 +1,61 @@
+body {
+	font-family: 'Source Code Pro', sans-serif;
+}
+
+ /* WebKit and Opera browsers */
+ @-webkit-keyframes spinner {
+ 	from { -webkit-transform: rotateZ(0deg); }
+	to { -webkit-transform: rotateZ(-360deg); }
+}
+
+/* all other browsers */
+@keyframes spinner { 
+	from { -moz-transform: rotateZ(0deg); -ms-transform: rotateZ(0deg); transform: rotateZ(0deg); }
+	to { -moz-transform: rotateZ(-360deg); -ms-transform: rotateZ(-360deg); transform: rotateZ(-360deg); }
+}
+
+.stationary {
+	font-size: 72pt;
+}
+
+.stage1 {
+	position:absolute;
+	top: 40px;
+	left: 0px;
+	width: 100%;
+	z-index: 101;
+}
+
+.alert {
+	color: red;
+}
+
+.spinner {
+	-webkit-animation-name: spinner;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-duration: 6s;
+	animation-name: spinner;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 6s;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	font-size: 72pt;
+	color: #BBB;
+}
+
+.stage2 {
+	position:absolute;
+	top: 40px;
+	left: 0px;
+	width: 100%;
+
+	-webkit-perspective: 1200px;
+	-moz-perspective: 1200px;
+	-ms-perspective: 1200px;
+	perspective: 1200px;
+	z-index: 100;
+}
